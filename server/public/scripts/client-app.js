@@ -18,6 +18,8 @@ function getBooks() {
         $el.append('<strong>' + book.title + '</strong>');
         $el.append(' <em>' + book.author + '</em');
         $el.append(' <time>' + book.published + '</time>');
+        $el.append(' <em>' + book.edition + '</em');
+        $el.append(' <em>' + book.publisher + '</em');
         $('#book-list').append($el);
       });
     },

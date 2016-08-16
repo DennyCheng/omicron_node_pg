@@ -3,7 +3,13 @@ var app = express();
 var path = require('path');
 var bodyParser = require('body-parser');
 
+//our routes
+var books = require('./routes/books');
+
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use('/books',books);
+//request comes to /books and it goes into the books(the required routes)
 
 // Catchall route
 app.get('/*', function (req, res) {
